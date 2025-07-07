@@ -60,7 +60,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./django:/backend
+      - ./django:/backend # 로컬 소스코드를 컨테이너에 마운트
     environment:
       - DATABASE_URL=postgresql://dev_user:dev_password@db:5432/dev_db
     depends_on:
